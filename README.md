@@ -1,77 +1,111 @@
 <h1 align="center">🩺 HealTrack 🩺</h1>
-<p align="center"><strong>A Personal Health Trackker App</strong></p>
+<p align="center"><strong>A Personal Health Tracker App</strong></p>
+<div align="center">
+  <img src="Healtrack_logo.png" alt="HealTrack Logo" height="200"/>
+</div>
 
-## 📝 Deskripsi Singkat
 
-**HealTrack** adalah aplikasi desktop berbasis **Java Fx** yang memudahkan pengguna melacak aktivitas kesehatannya setiap hari. Pengguna dapat mencatat:
-- Asupan makanan  
-- Olahraga  
-- Tidur  
-- Minum air  
-
-Aplikasi ini menyajikan **ringkasan harian dan mingguan**, serta mendukung sistem **login dan profil pengguna**.
 
 ---
 
-## 🎯 Tujuan Pengembangan
+## 🌐 Konsep Umum
 
-- Menyediakan alat praktis untuk memantau kebiasaan sehat secara mandiri  
-- Meningkatkan kesadaran kesehatan melalui pencatatan harian  
-- Menyajikan aplikasi Java Swing sederhana namun fungsional  
+**HealTrack** adalah aplikasi desktop berbasis **JavaFX (Gradle)** yang dirancang untuk membantu pengguna dalam melacak dan memantau aktivitas kesehatan mereka secara konsisten setiap hari. Dengan antarmuka yang intuitif dan fitur yang lengkap, HealTrack bertujuan menjadi asisten kesehatan pribadi digital yang sederhana namun bermanfaat.
 
 ---
 
-## 🔧 Fitur Utama
+## 🧩 Fitur Utama
 
-1. Login & Register Pengguna  
-2. Input Data Kesehatan (makanan, olahraga, tidur, air)  
-3. Dashboard Ringkasan Harian  
-4. Riwayat Mingguan  
-5. Profil Pengguna (tinggi, berat, target)  
-6. Pengingat Pop-up Sederhana (opsional)  
+### 🍽️ Input Aktivitas Harian
 
----
+Catat konsumsi makanan, olahraga, waktu tidur, dan jumlah air minum dengan mudah.
 
-## 🧩 Struktur Kelas (Ringkas)
+### 📊 Dashboard Ringkasan
 
-**model/**
-- `User`: Menyimpan data pengguna dan menghitung BMI  
-- `HealthEntry` (abstract class): Superclass entri dengan atribut tanggal, tipe, nilai, dan catatan  
-- `Tracker`: Menyimpan seluruh entri dan menyediakan metode seperti `addEntry()`, `getSummaryByDate()`, dll  
+Tampilkan ringkasan data harian dan mingguan dalam tampilan yang rapi.
 
-**controller/**
-- `AppController`: Menangani login, register, input, dan menjadi penghubung model ↔ GUI  
+### 👤 Profil Kesehatan
 
-**view/**
-- `LoginFrame`: UI untuk login dan register  
-- `DashboardFrame`: Menampilkan ringkasan harian dan tombol akses  
-- `InputFrame`: Form input data kesehatan  
-- `HistoryFrame` (opsional): Tabel riwayat mingguan  
+Kelola data tinggi, berat, dan target kesehatan pengguna. Termasuk fitur kalkulasi BMI.
+
+### 🔐 Sistem Login & Register
+
+Autentikasi pengguna untuk menyimpan data personal secara terpisah.
+
+### ⏰ Pengingat Kesehatan (Opsional)
+
+Pop-up friendly sebagai pengingat aktivitas sehat.
 
 ---
 
-## 💡 Penerapan OOP
+## 📦 Struktur Proyek
 
-| Pilar OOP     | Implementasi                                                                 |
-|---------------|-------------------------------------------------------------------------------|
-| Encapsulation | Atribut pada `User`, `HealthEntry` bersifat private dengan getter/setter     |
-| Inheritance   | `HealthEntry` sebagai superclass abstrak                                     |
-| Abstraction   | `HealthEntry` menyembunyikan detail spesifik dari entri                      |
-| Polymorphism  | `getSummary()` dapat diimplementasikan berbeda di subclass                   |
+### 🔹 Kelas Utama
 
----
+* **Main.java**  
+  Titik masuk aplikasi. Menyiapkan stage awal dan memuat tampilan login.
 
-## 🔄 Flow Aplikasi
-
-1. Pengguna membuka aplikasi → Login/Register  
-2. Masuk ke dashboard → Lihat ringkasan harian  
-3. Input data aktivitas harian  
-4. Lihat riwayat mingguan  
-5. Kelola data profil  
+* **AppController.java**  
+  Mengatur alur kerja aplikasi, mulai dari login, registrasi, hingga input data dan navigasi antar tampilan.
 
 ---
 
-## 📁 Struktur Folder Proyek HealTrack
+### 🧍‍♂️ Model Pengguna & Data Kesehatan
+
+* **User.java**  
+  Mewakili pengguna aplikasi dengan atribut dasar (nama, tinggi, berat, target).  
+  Termasuk metode `calculateBMI()`.
+
+* **HealthEntry.java** *(abstract)*  
+  Superclass untuk semua jenis entri (makanan, olahraga, tidur, air), dengan atribut:
+  - `tanggal`, `tipe`, `nilai`, `catatan`
+
+* **Tracker.java**  
+  Menyimpan daftar `HealthEntry` dan menyediakan metode:  
+  - `addEntry()`, `getEntriesByDate()`, `getWeeklySummary()`
+
+---
+
+### 🖼️ View (FXML + JavaFX UI)
+
+* **LoginView.java** & `login_view.fxml`  
+  Tampilan login dan registrasi pengguna.
+
+* **DashboardView.java** & `dashboard_view.fxml`  
+  Ringkasan aktivitas hari ini, shortcut ke fitur utama.
+
+* **InputView.java** & `input_view.fxml`  
+  Form input data (makanan, olahraga, tidur, air).
+
+* **HistoryView.java** & `history_view.fxml`  
+  Riwayat aktivitas mingguan dalam bentuk tabel.
+
+* **ProfileView.java** & `profile_view.fxml`  
+  Tampilkan dan edit informasi profil pengguna.
+
+---
+
+## 💡 Konsep OOP yang Diimplementasikan
+
+| Konsep        | Implementasi                                                              |
+| ------------- | ------------------------------------------------------------------------- |
+| Inheritance   | `HealthEntry` menjadi superclass dari berbagai entri kesehatan.           |
+| Abstraction   | Detail dari entri disembunyikan di dalam `HealthEntry`.                   |
+| Encapsulation | Atribut pada `User`, `HealthEntry` bersifat private dengan getter/setter. |
+| Polymorphism  | `getSummary()` dapat dioverride oleh subclass entri spesifik.             |
+
+---
+
+## ▶️ Cara Menjalankan (JavaFX Gradle)
+
+1. Pastikan Java dan JavaFX SDK telah diinstal.
+2. Jalankan aplikasi via Gradle:
+```bash
+./gradlew run
+```
+
+## 📁 Struktur Folder HealTrack
+
 ```bash
 src/
 └── main/
@@ -88,6 +122,8 @@ src/
     │       │   ├── InputView.java
     │       │   ├── LoginView.java
     │       │   └── ProfileView.java
+    │       └── controller/
+    │           └── AppController.java
     │       └── Main.java
     │
     ├── resources/
@@ -102,10 +138,8 @@ src/
     │           ├── input_view.fxml
     │           ├── login_view.fxml
     │           └── profile_view.fxml
-
 ```
-
----
-## Kontributor
-- Nama: Ishmah Nurwasilah
-- Nama: Jonas Ba'ka
+## Author
+<a href="https://github.com/jonasss07/PROYEK-FINAL-LAB-OOP/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jonasss07/PROYEK-FINAL-LAB-OOP" />
+</a>
