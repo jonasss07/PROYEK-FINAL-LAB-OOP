@@ -71,21 +71,38 @@ Aplikasi ini menyajikan **ringkasan harian dan mingguan**, serta mendukung siste
 
 ---
 
-## 📁 Struktur Folder
+## 📁 Struktur Folder Proyek HealTrack
 ```bash
 src/
-├── model/
-│ ├── User.java
-│ ├── HealthEntry.java
-│ └── Tracker.java
-├── controller/
-│ └── AppController.java
-├── view/
-│ ├── LoginFrame.java
-│ ├── DashboardFrame.java
-│ ├── InputFrame.java
-│ └── HistoryFrame.java
-└── Main.java
+└── main/
+    ├── java/
+    │   └── healtrack/
+    │       ├── model/
+    │       │   ├── HealthEntry.java
+    │       │   ├── Tracker.java
+    │       │   └── User.java
+    │       ├── view/
+    │       │   ├── DashboardView.java
+    │       │   ├── EditProfileView.java
+    │       │   ├── HistoryView.java
+    │       │   ├── InputView.java
+    │       │   ├── LoginView.java
+    │       │   └── ProfileView.java
+    │       └── Main.java
+    │
+    ├── resources/
+    │   └── healtrack/
+    │       ├── style/
+    │       │   ├── default_avatar.png
+    │       │   └── style.css
+    │       └── view/
+    │           ├── dashboard_view.fxml
+    │           ├── edit_profile.fxml
+    │           ├── history_view.fxml
+    │           ├── input_view.fxml
+    │           ├── login_view.fxml
+    │           └── profile_view.fxml
+
 ```
 
 ---
