@@ -3,7 +3,7 @@
 
 ## 📝 Deskripsi Singkat
 
-**HealTrack** adalah aplikasi desktop berbasis **Java Swing** yang memudahkan pengguna melacak aktivitas kesehatannya setiap hari. Pengguna dapat mencatat:
+**HealTrack** adalah aplikasi desktop berbasis **Java Fx** yang memudahkan pengguna melacak aktivitas kesehatannya setiap hari. Pengguna dapat mencatat:
 - Asupan makanan  
 - Olahraga  
 - Tidur  
