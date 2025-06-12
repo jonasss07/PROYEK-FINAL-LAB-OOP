@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    // Tambahkan dependency lain di sini jika diperlukan
+}
+
+application {
+    mainClass = 'healtrack.Main'
+}
+
+// Optional: gunakan versi Java default dari sistem dulu
+// Jika toolchain ingin diaktifkan kembali nanti:
+// java {
+//     toolchain {
+//         languageVersion = JavaLanguageVersion.of(21)
+//     }
+// }

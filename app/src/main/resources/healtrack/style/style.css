@@ -1,0 +1,185 @@
+/* ======= FONT IMPORT (Google Fonts Quicksand & Poppins) ======= */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Poppins:wght@600;700&display=swap');
+
+/* ======= ROOT & BACKGROUND ======= */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ffe0f7 0%, #b9faff 50%, #fff0c1 100%);
+    /* Gradient pastel peach-pink-yellow-biru */
+    -fx-font-family: 'Quicksand', 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ======= HEADER ======= */
+.header-bar {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #43e97b 0%, #38f9d7 100%);
+    -fx-padding: 20 0 20 0;
+    -fx-background-radius: 0 0 32 32;
+    -fx-effect: dropshadow(gaussian, #38f9d7, 20, 0.25, 0, 4);
+}
+
+.header-text {
+    -fx-font-size: 34px;
+    -fx-font-family: 'Poppins', 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-text-fill: #fff;
+    -fx-padding: 14 32;
+    -fx-letter-spacing: 2px;
+    -fx-effect: dropshadow(gaussian, #fff, 6, 0.18, 0, 1);
+}
+
+/* ======= SECTION & LABEL ======= */
+.title-text {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+    /* JavaFX tidak support text gradient, pakai warna solid saja */
+    -fx-text-fill: #3a1c71;
+    -fx-effect: dropshadow(gaussian, #d76d77, 2, 0.10, 0, 1);
+    -fx-padding: 0 0 22 0;
+}
+
+.item-label {
+    -fx-font-size: 17px;
+    -fx-font-family: 'Quicksand', Arial, sans-serif;
+    -fx-text-fill: #3a1c71;
+    -fx-font-weight: 600;
+}
+
+.item-value {
+    -fx-font-size: 20px;
+    -fx-text-fill: #d76d77;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+}
+
+/* ======= TOMBOL LOGIN & REGISTER GLASSY (UPDATED WARNA ISI & GLOW) ======= */
+.login-button {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #b7f8dbcc 0%, #bdfcffcc 100%);
+    -fx-text-fill: #1bc98e;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 20px;
+    -fx-background-radius: 18;
+    -fx-padding: 12 38;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #3df8ba, 12, 0.38, 0, 2);
+    -fx-border-radius: 18;
+    -fx-border-color: #3df8ba;
+    -fx-border-width: 2;
+    -fx-transition: all 0.2s;
+}
+.login-button:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #43e97b 0%, #38f9d7 100%);
+    -fx-text-fill: #fff;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+    -fx-effect: dropshadow(gaussian, #38f9d7, 20, 0.40, 0, 4);
+}
+
+.register-button {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ffd6f6cc 0%, #fff0c1cc 100%);
+    -fx-text-fill: #ff6baf;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-font-size: 20px;
+    -fx-background-radius: 18;
+    -fx-padding: 12 38;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #ffb2e6, 12, 0.38, 0, 2);
+    -fx-border-radius: 18;
+    -fx-border-color: #ffb2e6;
+    -fx-border-width: 2;
+    -fx-transition: all 0.2s;
+}
+.register-button:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #ffb6c1 0%, #f7971e 100%);
+    -fx-text-fill: #fff;
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+    -fx-effect: dropshadow(gaussian, #f7971e, 20, 0.40, 0, 4);
+}
+
+/* ======= TOMBOL UTAMA (DASHBOARD) ======= */
+.main-button {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #43e97b 0%, #38f9d7 100%);
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-padding: 12 30;
+    -fx-background-radius: 18;
+    -fx-cursor: hand;
+    -fx-font-size: 18px;
+    -fx-effect: dropshadow(gaussian, #38f9d7, 12, 0.15, 0, 2);
+    -fx-transition: all 0.2s;
+}
+
+.main-button:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #f7971e 0%, #ffd200 100%);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, #f7971e, 16, 0.20, 0, 4);
+    -fx-text-fill: #fff;
+}
+
+.main-button-blue {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #56ccf2 0%, #2f80ed 100%);
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Poppins', 'Quicksand', Arial, sans-serif;
+    -fx-font-weight: 700;
+    -fx-padding: 12 30;
+    -fx-background-radius: 18;
+    -fx-font-size: 18px;
+    -fx-effect: dropshadow(gaussian, #56ccf2, 12, 0.18, 0, 2);
+}
+.main-button-blue:hover {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 0%, #2f80ed 0%, #56ccf2 100%);
+    -fx-scale-x: 1.08;
+    -fx-scale-y: 1.08;
+    -fx-effect: dropshadow(gaussian, #2f80ed, 16, 0.22, 0, 4);
+}
+
+/* ======= PIECHART ======= */
+.chart-pie {
+    -fx-pie-label-visible: true;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, #d76d77, 8, 0.2, 0, 3);
+}
+.chart-legend {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #3a1c71;
+}
+.chart-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3a1c71;
+}
+
+/* ======= CARD & SECTION ======= */
+.card {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ffffffee 60%, #e0c3fcaa 100%);
+    -fx-background-radius: 22;
+    -fx-effect: dropshadow(gaussian, #a3a3a3, 16, 0.12, 0, 4);
+    -fx-padding: 32 32 32 32;
+    -fx-spacing: 18;
+    -fx-border-radius: 22;
+    -fx-border-color: #f1c40f;
+    -fx-border-width: 2;
+}
+
+.section {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #f6f5ff88 60%, #fff0c188 100%);
+    -fx-background-radius: 14;
+    -fx-padding: 20;
+    -fx-spacing: 8;
+}
+
+/* ======= HOVER ANIMATION ======= */
+.button, .main-button, .main-button-blue, .login-button, .register-button {
+    -fx-transition: all 0.2s;
+}
+
+.button:pressed, .main-button:pressed, .main-button-blue:pressed,
+.login-button:pressed, .register-button:pressed {
+    -fx-translate-y: 2;
+    -fx-opacity: 0.85;
+}

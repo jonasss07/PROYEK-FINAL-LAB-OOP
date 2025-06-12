@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="healtrack.view.InputView">
+    <center>
+        <VBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="30.0" right="30.0" bottom="30.0" left="30.0"/>
+            </padding>
+            <Label text="Tambah Data Kesehatan" styleClass="header-text"/>
+
+            <ComboBox fx:id="typeComboBox" promptText="Pilih Jenis Data" maxWidth="250"/>
+            <TextField fx:id="valueField" promptText="Nilai" maxWidth="250"/>
+            <TextField fx:id="notesField" promptText="Catatan (opsional)" maxWidth="250"/>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="saveButton" text="💾 Simpan" styleClass="main-button"/>
+                <Button fx:id="cancelButton" text="❌ Batal" styleClass="main-button-blue"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

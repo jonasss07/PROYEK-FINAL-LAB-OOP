@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="healtrack.view.ProfileView"
+           style="-fx-background-color: linear-gradient(to bottom right, #fbeaff, #bffcff, #fdfdbb);">
+    <VBox alignment="CENTER" spacing="26">
+        <padding>
+            <Insets top="38" right="38" bottom="38" left="38"/>
+        </padding>
+
+        <!-- Avatar Bundar dengan efek shadow dan background bulat -->
+        <StackPane>
+            <Circle radius="60" fill="#fff" opacity="0.7"/>
+            <ImageView fx:id="avatarImage" fitWidth="120" fitHeight="120" preserveRatio="true"
+                       style="-fx-effect: dropshadow(gaussian, #6ec6ff, 12,0.14,0,3);"/>
+        </StackPane>
+
+        <!-- Tombol Pilih Foto -->
+        <Button fx:id="pilihGambarButton" text="📁 Pilih Foto Profil"
+                style="-fx-background-color: linear-gradient(to right, #92fe9d, #00c9ff);
+                       -fx-text-fill: #333; -fx-font-weight: bold; -fx-background-radius: 18;"/>
+
+        <!-- Nama User -->
+        <Label fx:id="nameLabel" text="Nama User"
+               style="-fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #2a4d69;"/>
+
+        <!-- Card Info User -->
+        <HBox alignment="CENTER" spacing="50"
+              style="-fx-background-color: rgba(255,255,255,0.86); -fx-background-radius: 18; -fx-padding: 16 38 16 38;">
+            <VBox alignment="CENTER">
+                <Label text="📏 Tinggi" style="-fx-font-size: 13px; -fx-text-fill: #555;"/>
+                <Label fx:id="heightLabel" text="0 cm"
+                       style="-fx-font-size: 16px; -fx-font-family: 'JetBrains Mono'; -fx-font-weight: bold;"/>
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label text="⚖ Berat" style="-fx-font-size: 13px; -fx-text-fill: #555;"/>
+                <Label fx:id="weightLabel" text="0 kg"
+                       style="-fx-font-size: 16px; -fx-font-family: 'JetBrains Mono'; -fx-font-weight: bold;"/>
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label text="🎯 Target BMI" style="-fx-font-size: 13px; -fx-text-fill: #555;"/>
+                <Label fx:id="bmiLabel" text="0"
+                       style="-fx-font-size: 16px; -fx-font-family: 'JetBrains Mono'; -fx-font-weight: bold;"/>
+            </VBox>
+        </HBox>
+
+        <!-- Tombol Edit Profil -->
+        <Button text="✎ Edit Profil" onAction="#openEditProfile"
+                style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200);
+                       -fx-text-fill: #222; -fx-font-weight: bold; -fx-background-radius: 18;"/>
+    </VBox>
+</StackPane>
